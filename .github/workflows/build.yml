@@ -27,5 +27,7 @@ jobs:
           path: './ocr_cache'
           ref: 'ocr_cache'
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
       - run: cd ocr_cache && npm install && node --version
