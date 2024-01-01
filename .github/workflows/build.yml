@@ -1,4 +1,4 @@
-name: build
+name: build_ocr_cache
 on:
   push:
     branches: ['ocr_config']
