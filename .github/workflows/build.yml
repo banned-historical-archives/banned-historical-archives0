@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   container-job:
-    runs-on: ghcr.io/banned-historical-archives/ocr:sha256-01f5dc32bc5990d9aa12911d0a93654d0b124802c2b39a33a6ca1858cca853c1.sig
+    runs-on: ghcr.io/banned-historical-archives/ocr:main
     steps:
       - uses: actions/checkout@v4
         - with:
