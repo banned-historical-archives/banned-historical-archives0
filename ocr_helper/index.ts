@@ -15,8 +15,13 @@ import {
   Pivot,
   TagType,
   OCRParameter,
+  Book,
 } from './types';
 import { merge_to_lines, pdfjsContentToOCRResult } from './utils';
+
+const cfg_dir = join(__dirname, '../');
+const cache_dir = join(__dirname, '../../ocr_cache/');
+const raw_dir  = join(__dirname, '../../main/');
 
 type PartRaw = { page: number; x: number; merge_up?: boolean } & ContentPartRaw;
 function extract_parts(
@@ -231,6 +236,15 @@ export async function parse(
 }
 
 (async () => {
-  const f_list = (await fs.readdir(join(__dirname, '..'))).filter(i => i.endsWith('.ts'))
-  console.log(f_list);
+  const f_list = (await fs.readdir(cfg_dir)).filter(i => i.endsWith('.ts'))
+  const cfgs = await Promise.all<Book>(
+    f_list.map((file) => import(join(cfg_dir, file))),
+  );
+
+  for (const cfg of cfgs) {
+    if (cfg.parser_option.ext == 'pdf') {
+      const res = await parse(join(raw_dir, cfg.path.replace('.pdf', '')), cfg.parser_option);
+      console.log(res);
+    }
+  }
 })();
