@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
+    "dommatrix": "^1.0.3",
     "fs-extra": "^11.2.0",
     "image-size": "^1.1.0",
     "pdf.js": "^0.1.0",
