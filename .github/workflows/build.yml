@@ -13,15 +13,15 @@ jobs:
     runs-on: ghcr.io/banned-historical-archives/ocr:main
     steps:
       - uses: actions/checkout@v4
-        - with:
+        with:
           path: './main'
           ref: 'main'
       - uses: actions/checkout@v4
-        - with:
+        with:
           path: './ocr_config'
           ref: 'ocr_config'
       - uses: actions/checkout@v4
-        - with:
+        with:
           path: './ocr_cache'
           ref: 'ocr_cache'
       - name: Use Node.js
