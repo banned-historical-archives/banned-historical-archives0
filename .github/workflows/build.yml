@@ -10,7 +10,9 @@ permissions:
 
 jobs:
   container-job:
-    runs-on: ghcr.io/banned-historical-archives/ocr:main
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/banned-historical-archives/ocr:main
     steps:
       - uses: actions/checkout@v4
         with:
