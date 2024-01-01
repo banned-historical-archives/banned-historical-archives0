@@ -99,7 +99,7 @@ export default async function ocr({
         image_dir: abs_ocr_target,
       }),
     );
-    const ocr_command = `python3 ocr.py ${tmp_file}`;
+    const ocr_command = `python3 /app/ocr.py ${tmp_file}`;
     const raw = execSync(ocr_command, {
       cwd: process.env.OCR_EXEC_PATH!,
     }).toString();
