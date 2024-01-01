@@ -1,0 +1,31 @@
+name: build
+on:
+  push:
+    branches: ['ocr_config']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  container-job:
+    runs-on: ghcr.io/banned-historical-archives/ocr:sha256-01f5dc32bc5990d9aa12911d0a93654d0b124802c2b39a33a6ca1858cca853c1.sig
+    steps:
+      - uses: actions/checkout@v4
+        - with:
+          path: './main'
+          ref: 'main'
+      - uses: actions/checkout@v4
+        - with:
+          path: './ocr_config'
+          ref: 'ocr_config'
+      - uses: actions/checkout@v4
+        - with:
+          path: './ocr_cache'
+          ref: 'ocr_cache'
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        working-directory: ./ocr_config
+      - run: npm install
+      - run: node --version
