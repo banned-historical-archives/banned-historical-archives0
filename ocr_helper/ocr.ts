@@ -35,14 +35,14 @@ export default async function ocr({
   const target = pdf ? await pdf : img!;
   const abs_target_path = isAbsolute(target)
     ? target
-    : join(__dirname, `../public/books/${target}`);
+    : join(__dirname, `../../main/${target}`);
 
   const last_dirname = dirname(target).split('/').slice(-1);
   cache_path = cache_path
     ? cache_path!
     : (join(
         __dirname,
-        `ocr_cache/${last_dirname}/${basename(target).replace(
+        `../../ocr_cache/${last_dirname}/${basename(target).replace(
           /[^\d]/g,
           '',
         )}.json`,

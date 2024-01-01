@@ -30,4 +30,4 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: cd ocr_cache && npm install && node --version
+      - run: cd ocr_cache && npm install && npm run start

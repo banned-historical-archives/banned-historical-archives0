@@ -1,5 +1,5 @@
-import { join } from 'path';
-import { basename } from 'node:path/posix';
+import { join, basename } from 'path';
+import fs from 'fs-extra';
 import { existsSync, writeFileSync, readFileSync } from 'fs';
 import ocr from './ocr';
 import {
@@ -93,8 +93,8 @@ export async function parse(
 ): Promise<ParserResult[]> {
   parser_opt.ocr = {
     det_db_box_thresh: 0.2,
-    use_gpu: true,
-    gpu_mem: 7000,
+    // use_gpu: true,
+    // gpu_mem: 7000,
     rec_model_dir: './paddle/ch_PP-OCRv4_rec_infer',
     det_model_dir: './paddle/ch_PP-OCRv4_det_infer',
 
@@ -128,7 +128,7 @@ export async function parse(
               page: i,
               cache_path: join(
                 __dirname,
-                `../ocr_cache/${basename(dirPathOrFilePath).replace(
+                `../../ocr_cache/${basename(dirPathOrFilePath).replace(
                   /\.pdf$/,
                   '',
                 )}/${i}.json`,
@@ -229,3 +229,8 @@ export async function parse(
 
   return res;
 }
+
+(async () => {
+  const f_list = (await fs.readdir(join(__dirname, '..'))).filter(i => i.endsWith('.ts'))
+  console.log(f_list);
+})();
