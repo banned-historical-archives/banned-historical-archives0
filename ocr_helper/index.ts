@@ -96,6 +96,7 @@ export async function parse(
   dirPathOrFilePath: string,
   parser_opt: ParserOption,
 ): Promise<ParserResult[]> {
+  console.log(parser_opt);
   parser_opt.ocr = {
     det_db_box_thresh: 0.2,
     // use_gpu: true,
@@ -237,9 +238,9 @@ export async function parse(
 
 (async () => {
   const f_list = (await fs.readdir(cfg_dir)).filter(i => i.endsWith('.ts'))
-  const cfgs = await Promise.all<Book>(
+  const cfgs = (await Promise.all<{default: Book}>(
     f_list.map((file) => import(join(cfg_dir, file))),
-  );
+  )).map(i => i.default);
 
   for (const cfg of cfgs) {
     if (cfg.parser_option.ext == 'pdf') {
