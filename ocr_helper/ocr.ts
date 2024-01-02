@@ -32,7 +32,7 @@ export default async function ocr({
   ocr_results: OCRResult[];
   dimensions: { height: number; width: number };
 }> {
-  const target = pdf ? await pdf : img!;
+  const target = pdf || img!;
   const abs_target_path = isAbsolute(target)
     ? target
     : join(__dirname, `../../main/${target}`);

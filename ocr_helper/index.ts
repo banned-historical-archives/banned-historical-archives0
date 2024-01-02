@@ -247,7 +247,7 @@ export async function parse(
   for (const cfg of cfgs) {
     if (cfg.parser_option.ext == 'pdf') {
       const uuid = cfg.path.replace('.pdf', '');
-      const res = await parse(join(raw_dir, uuid), cfg.parser_option);
+      const res = await parse(join(raw_dir, uuid + '.pdf'), cfg.parser_option);
       await fs.ensureDir(join(parsed_dir, uuid.slice(0, 3)))
       await fs.writeFile(join(parsed_dir, `${uuid.slice(0, 3)}/${uuid}.json`), JSON.stringify(res));
     }
