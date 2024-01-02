@@ -104,6 +104,7 @@ export default async function ocr({
     const raw = execSync(ocr_command, {
       cwd: process.env.OCR_EXEC_PATH!,
     }).toString();
+    console.log(raw);
     const t = JSON.parse(raw) as [
       [[number, number], [number, number], [number, number], [number, number]],
       [string, number],
