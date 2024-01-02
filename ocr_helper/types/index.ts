@@ -225,7 +225,7 @@ export type OCRParameter = {
   rec_image_shape: '3, 48, 320';
   rec_batch_num: number; // 6,
   max_text_length: number; // 25,
-  rec_char_dict_path: './paddle/ppocr_keys_v1.txt';
+  rec_char_dict_path: string; // '/app/paddle/ppocr_keys_v1.txt';
   use_space_char: boolean; // True,
   vis_font_path: string; // "./doc/fonts/simfang.ttf",
   drop_score: number; // 0.5,
