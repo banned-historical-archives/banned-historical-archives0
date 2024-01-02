@@ -89,8 +89,9 @@ export default async function ocr({
         det_db_box_thresh: 0.2,
         // 'use_gpu': true,
         // 'gpu_mem': 7000,
-        rec_model_dir: './paddle/ch_PP-OCRv4_rec_infer',
-        det_model_dir: './paddle/ch_PP-OCRv4_det_infer',
+        rec_char_dict_path: '/app/paddle/ppocr_keys_v1.txt',
+        rec_model_dir: '/app/paddle/ch_PP-OCRv4_rec_infer',
+        det_model_dir: '/app/paddle/ch_PP-OCRv4_det_infer',
 
         det_limit_side_len: 2496,
         drop_score: 0.3,
