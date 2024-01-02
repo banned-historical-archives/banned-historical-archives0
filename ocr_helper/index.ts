@@ -20,6 +20,8 @@ import {
 import { merge_to_lines, pdfjsContentToOCRResult } from './utils';
 
 const cfg_dir = join(__dirname, '../');
+const patch_dir = join(__dirname, '../../patch');
+const parsed_dir = join(__dirname, '../../parsed');
 const cache_dir = join(__dirname, '../../ocr_cache/');
 const raw_dir  = join(__dirname, '../../main/');
 
@@ -244,8 +246,10 @@ export async function parse(
 
   for (const cfg of cfgs) {
     if (cfg.parser_option.ext == 'pdf') {
-      const res = await parse(join(raw_dir, cfg.path.replace('.pdf', '')), cfg.parser_option);
-      console.log(res);
+      const uuid = cfg.path.replace('.pdf', '');
+      const res = await parse(join(raw_dir, uuid), cfg.parser_option);
+      await fs.ensureDir(join(parsed_dir, uuid.slice(0, 3)))
+      await fs.writeFile(join(parsed_dir, `${uuid.slice(0, 3)}/${uuid}.json`), JSON.stringify(res));
     }
   }
 })();
