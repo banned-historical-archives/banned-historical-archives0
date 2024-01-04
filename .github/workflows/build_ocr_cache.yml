@@ -16,7 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          path: './main'
+          repository: 'banned-historical-archives/ocr_helper'
+          path: './ocr_helper'
+          ref: 'main'
+      - uses: actions/checkout@v4
+        with:
+          path: './raw'
           ref: 'main'
       - uses: actions/checkout@v4
         with:
@@ -30,8 +35,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: pwd
-      - run: cd ocr_config && npm install && npm run start
+      - run: cd ocr_helper && npm install && npm run build_ocr_cache -- ../ocr_config ../raw ../ocr_cache
       - run: git config --global http.postBuffer 2097152000
       - run: git config --global user.email "you@example.com"
       - run: git config --global user.name "Your Name"
