@@ -2493,7 +2493,7 @@ export default {
         authors: ['毛泽东'],
       },
     ],
-    ext: 'pdf',
+    type: 'pdf',
     ocr: { content_thresholds: [0.06, 0.06, 0.01, 0.01] },
   },
   parser_id: 'automation',

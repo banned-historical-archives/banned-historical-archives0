@@ -10,7 +10,7 @@ export default {
       'https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives0/main/maoquanji41.pdf',
   },
   parser_option: {
-    ext: 'pdf',
+    type: 'pdf',
     ocr: { content_thresholds: [0.06, 0.06, 0.01, 0.01] },
     page_limits: [],
     articles: [
