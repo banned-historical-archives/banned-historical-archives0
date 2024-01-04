@@ -39,4 +39,23 @@ jobs:
       - run: git config --global http.postBuffer 2097152000
       - run: git config --global user.email "you@example.com"
       - run: git config --global user.name "Your Name"
-      - run: cd ocr_cache && git add ./ && git commit -m automation && git push
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          cd ocr_cache
+          git status --porcelain
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            echo "::set-output name=changes::false"
+          else
+            echo "Changes detected"
+            echo "::set-output name=changes::true"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          cd ./ocr_cache
+          git add .
+          git commit -m automation && git push
