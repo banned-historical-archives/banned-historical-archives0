@@ -2079,9 +2079,9 @@ export default {
         authors: ['毛泽东'],
       },
     ],
-    type: 'pdf',
+    ext: 'pdf',
     ocr: { content_thresholds: [0.06, 0.06, 0.01, 0.01] },
   },
   parser_id: 'automation',
-  path: 'maoquanji33.pdf',
+  path: '/archives0/maoquanji33.pdf',
 };

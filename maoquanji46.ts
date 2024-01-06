@@ -10,7 +10,7 @@ export default {
       'https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives0/main/maoquanji46.pdf',
   },
   parser_option: {
-    type: 'pdf',
+    ext: 'pdf',
     ocr: { content_thresholds: [0.06, 0.06, 0.01, 0.01] },
     page_limits: [],
     articles: [
@@ -1379,5 +1379,5 @@ export default {
     ],
   },
   parser_id: 'automation',
-  path: 'maoquanji46.pdf',
+  path: '/archives0/maoquanji46.pdf',
 };

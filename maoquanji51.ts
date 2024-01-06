@@ -11,7 +11,7 @@ export default {
   },
   parser_option: {
     page_limits: [],
-    type: 'pdf',
+    ext: 'pdf',
     ocr: { content_thresholds: [0.06, 0.06, 0.01, 0.01] },
     articles: [
       {
@@ -1734,5 +1734,5 @@ export default {
     ],
   },
   parser_id: 'automation',
-  path: 'maoquanji51.pdf',
+  path: '/archives0/maoquanji51.pdf',
 };
