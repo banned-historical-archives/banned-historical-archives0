@@ -1,15 +1,17 @@
 name: build_parsed_article
 on:
+  workflow_dispatch:
   push:
-    branches: ['ocr_patch']
+    branches: ['ocr_patch', 'ocr_cache']
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 
 jobs:
-  container-job:
+  build_parsed_article:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -49,10 +51,10 @@ jobs:
           git status --porcelain
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit"
-            echo "::set-output name=changes::false"
+            echo "changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "Changes detected"
-            echo "::set-output name=changes::true"
+            echo "changes=true" >> "$GITHUB_OUTPUT"
           fi
       
       - name: Commit and push changes
@@ -61,3 +63,16 @@ jobs:
           cd ./parsed_article
           git add .
           git commit -m automation && git push
+      - name: Invoke workflow
+        uses: benc-uk/workflow-dispatch@v1
+        if: steps.check_changes.outputs.changes == 'true'
+        with:
+          workflow: build_tags.yml
+          ref: parsed_article
+      - name: Invoke workflow
+        if: steps.check_changes.outputs.changes == 'true'
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: build.yml
+          ref: master
+          repo: banned-historical-archives/banned-historical-archives.github.io
