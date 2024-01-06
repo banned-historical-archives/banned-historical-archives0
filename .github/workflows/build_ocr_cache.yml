@@ -1,5 +1,6 @@
 name: build_ocr_cache
 on:
+  workflow_dispatch:
   push:
     branches: ['ocr_config']
 
@@ -7,6 +8,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 
 jobs:
   container-job:
@@ -59,3 +61,8 @@ jobs:
           cd ./ocr_cache
           git add .
           git commit -m automation && git push
+      - name: Invoke workflow
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: build_parsed_article.yml
+          ref: ocr_cache
