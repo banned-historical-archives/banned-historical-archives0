@@ -2847,5 +2847,6 @@ export default {
     ]
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji43.pdf"
+  "path": "/archives0/maoquanji43.pdf",
+  "resource_type": "book"
 }
