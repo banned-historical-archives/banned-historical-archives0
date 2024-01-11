@@ -2251,7 +2251,7 @@ export default {
     ]
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji40.pdf",
+  "path": "maoquanji40.pdf",
   "resource_type": "book",
   "version": 2
 }

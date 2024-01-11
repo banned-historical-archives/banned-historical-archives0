@@ -2682,7 +2682,7 @@ export default {
     ]
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji46.pdf",
+  "path": "maoquanji46.pdf",
   "resource_type": "book",
   "version": 2
 }

@@ -4302,7 +4302,7 @@ export default {
     }
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji27.pdf",
+  "path": "maoquanji27.pdf",
   "resource_type": "book",
   "version": 2
 }

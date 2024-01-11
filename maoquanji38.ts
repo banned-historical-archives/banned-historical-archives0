@@ -2723,7 +2723,7 @@ export default {
     }
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji38.pdf",
+  "path": "maoquanji38.pdf",
   "resource_type": "book",
   "version": 2
 }

@@ -5025,7 +5025,7 @@ export default {
     }
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji32.pdf",
+  "path": "maoquanji32.pdf",
   "resource_type": "book",
   "version": 2
 }

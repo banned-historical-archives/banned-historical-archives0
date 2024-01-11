@@ -3342,7 +3342,7 @@ export default {
     ]
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji51.pdf",
+  "path": "maoquanji51.pdf",
   "resource_type": "book",
   "version": 2
 }

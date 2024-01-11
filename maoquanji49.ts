@@ -3420,7 +3420,7 @@ export default {
     ]
   },
   "parser_id": "automation",
-  "path": "/archives0/maoquanji49.pdf",
+  "path": "maoquanji49.pdf",
   "resource_type": "book",
   "version": 2
 }
