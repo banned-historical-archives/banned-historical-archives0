@@ -9,7 +9,7 @@ export default {
     "files": [
       "https://raw.githubusercontent.com/banned-historical-archives/banned-historical-archives0/main/maoquanji27.pdf"
     ]
-  },
+  }, 
   "parser_option": {
     "articles": [
       {
