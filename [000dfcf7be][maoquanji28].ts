@@ -1,0 +1,3 @@
+export default [
+  {"comments": {}, "description": "", "parts": {"0": {"type": "title"}, "1": {"diff": "=12\t-5", "type": "subdate"}, "2": {"diff": "-18\t+%E5%85%8B%E8%AF%9A%E5%90%8C%E5%BF%97%EF%BC%9A", "type": "appellation"}, "3": {"diff": "-3\t+%E4%B8%89%E6%9C%88%E5%8D%81%E5%9B%9B%E6%97%A5%E7%94%B5%E6%82%89%EF%BC%8C%E5%90%8C%E6%84%8F%E5%94%90%E7%94%9F%E6%99%BA%E6%9D%A5%E4%BA%AC%E4%B8%80%E8%B0%88%E3%80%82"}, "4": {"diff": "-15\t+%E6%AF%9B%E6%B3%BD%E4%B8%9C", "type": "signature"}, "5": {"delete": true}, "6": {"delete": true}}, "version": 2},
+];
