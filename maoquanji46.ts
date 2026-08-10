@@ -202,20 +202,33 @@ export default {
         "title": "两个中间地带",
         "dates": [
           {
-            "year": 1963,
-            "month": 9
+            "month": 9,
+            "year": 1963
           },
           {
-            "year": 1963,
-            "month": 1964,
-            "day": 7
+            "month": 7,
+            "year": 1964
           }
         ],
         "is_range_date": true,
         "authors": [
           "毛泽东"
         ]
-      },
+      ,
+        "tags": [
+        {
+          "name": "毛泽东",
+          "type": "人物"
+        },
+        {
+          "name": "世界形势",
+          "type": "主题/事件"
+        },
+        {
+          "name": "文章",
+          "type": "文稿类型"
+        }
+      ]},
       {
         "page_start": 66,
         "page_end": 67,
