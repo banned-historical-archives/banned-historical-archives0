@@ -875,20 +875,29 @@ export default {
         "title": "关于游泳的几次指示",
         "dates": [
           {
-            "year": 1958,
-            "month": 9
+            "month": 9,
+            "year": 1958
           },
           {
-            "year": 1958,
-            "month": 1966,
-            "day": 7
+            "month": 7,
+            "year": 1966
           }
         ],
         "is_range_date": true,
         "authors": [
           "毛泽东"
         ]
-      },
+      ,
+        "tags": [
+        {
+          "name": "毛泽东",
+          "type": "人物"
+        },
+        {
+          "name": "指示",
+          "type": "文稿类型"
+        }
+      ]},
       {
         "page_start": 275,
         "page_end": 275,
