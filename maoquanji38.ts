@@ -916,30 +916,16 @@ export default {
         "title": "中央关于增加点名批判的右派骨干分子人数等问题的通知",
         "dates": [
           {
-            "day": 9,
+            "year": 1957,
             "month": 7,
-            "year": 1957
+            "day": 9
           }
         ],
         "is_range_date": false,
         "authors": [
           "毛泽东"
         ]
-      ,
-        "tags": [
-        {
-          "name": "毛泽东",
-          "type": "人物"
-        },
-        {
-          "name": "彭真",
-          "type": "人物"
-        },
-        {
-          "name": "指示",
-          "type": "文稿类型"
-        }
-      ]},
+      },
       {
         "page_start": 158,
         "page_end": 159,
