@@ -4584,29 +4584,19 @@ export default {
         "title": "关于镇压反革命",
         "dates": [
           {
-            "month": 12,
-            "year": 1950
+            "year": 1950,
+            "month": 12
           },
           {
-            "month": 10,
-            "year": 1951
+            "year": 1951,
+            "month": 10
           }
         ],
         "is_range_date": true,
         "authors": [
           "毛泽东"
         ]
-      ,
-        "tags": [
-        {
-          "name": "毛泽东",
-          "type": "人物"
-        },
-        {
-          "name": "文章",
-          "type": "文稿类型"
-        }
-      ]},
+      },
       {
         "page_start": 458,
         "page_end": 459,

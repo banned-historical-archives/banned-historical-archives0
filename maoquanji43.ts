@@ -152,45 +152,19 @@ export default {
         "title": "读苏联《政治经济学教科书》的谈话（节选）",
         "dates": [
           {
-            "month": 12,
-            "year": 1959
+            "year": 1959,
+            "month": 12
           },
           {
-            "month": 2,
-            "year": 1960
+            "year": 1960,
+            "month": 2
           }
         ],
         "is_range_date": true,
         "authors": [
           "毛泽东"
         ]
-      ,
-        "tags": [
-        {
-          "name": "毛泽东",
-          "type": "人物"
-        },
-        {
-          "name": "李立三",
-          "type": "人物"
-        },
-        {
-          "name": "农业战线",
-          "type": "主题/事件"
-        },
-        {
-          "name": "工业战线",
-          "type": "主题/事件"
-        },
-        {
-          "name": "革命三结合",
-          "type": "主题/事件"
-        },
-        {
-          "name": "对话",
-          "type": "文稿类型"
-        }
-      ]},
+      },
       {
         "page_start": 84,
         "page_end": 85,
