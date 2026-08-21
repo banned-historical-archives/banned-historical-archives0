@@ -537,9 +537,8 @@ export default {
             "month": 10
           },
           {
-            "year": 1975,
-            "month": 1976,
-            "day": 1
+            "year": 1976,
+            "month": 1
           }
         ],
         "is_range_date": true,

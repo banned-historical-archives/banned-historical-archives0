@@ -879,9 +879,8 @@ export default {
             "month": 9
           },
           {
-            "year": 1958,
-            "month": 1966,
-            "day": 7
+            "year": 1966,
+            "month": 7
           }
         ],
         "is_range_date": true,

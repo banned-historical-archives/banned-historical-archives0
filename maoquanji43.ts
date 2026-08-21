@@ -156,9 +156,8 @@ export default {
             "month": 12
           },
           {
-            "year": 1959,
-            "month": 1960,
-            "day": 2
+            "year": 1960,
+            "month": 2
           }
         ],
         "is_range_date": true,

@@ -4588,9 +4588,8 @@ export default {
             "month": 12
           },
           {
-            "year": 1950,
-            "month": 1951,
-            "day": 10
+            "year": 1951,
+            "month": 10
           }
         ],
         "is_range_date": true,

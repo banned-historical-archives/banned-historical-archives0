@@ -1588,9 +1588,8 @@ export default {
             "month": 3
           },
           {
-            "year": 1964,
-            "month": 1965,
-            "day": 5
+            "year": 1965,
+            "month": 5
           }
         ],
         "is_range_date": true,
