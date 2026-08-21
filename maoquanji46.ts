@@ -206,9 +206,8 @@ export default {
             "month": 9
           },
           {
-            "year": 1963,
-            "month": 1964,
-            "day": 7
+            "year": 1964,
+            "month": 7
           }
         ],
         "is_range_date": true,

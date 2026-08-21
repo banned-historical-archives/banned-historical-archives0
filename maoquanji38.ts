@@ -916,9 +916,9 @@ export default {
         "title": "中央关于增加点名批判的右派骨干分子人数等问题的通知",
         "dates": [
           {
-            "year": 1,
-            "month": 957,
-            "day": 7
+            "year": 1957,
+            "month": 7,
+            "day": 9
           }
         ],
         "is_range_date": false,

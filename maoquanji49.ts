@@ -2208,9 +2208,8 @@ export default {
             "month": 3
           },
           {
-            "year": 1967,
-            "month": 1971,
-            "day": 3
+            "year": 1971,
+            "month": 3
           }
         ],
         "is_range_date": true,
